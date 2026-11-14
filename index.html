@@ -6,6 +6,14 @@
     <meta name="theme-color" content="#990000" />
     <meta name="description" content="Um guia direto para serviços e caminhos da vida acadêmica na UFPE." />
     <title>Rota Acadêmica — Guia UFPE</title>
+    <script>
+      try {
+        const savedTheme = localStorage.getItem("rota-academica-theme");
+        if (savedTheme === "light" || savedTheme === "dark") {
+          document.documentElement.dataset.theme = savedTheme;
+        }
+      } catch {}
+    </script>
     <link rel="stylesheet" href="styles.css" />
     <script src="app.js" defer></script>
   </head>
@@ -24,6 +32,10 @@
           <a href="#atalhos">Atalhos</a><a href="#rotas">Por assunto</a><a href="#duvidas">Dúvidas</a>
           <a class="nav-cta" href="https://sigaa.ufpe.br/sigaa/public/home.jsf" target="_blank" rel="noreferrer">Abrir SIGAA <span aria-hidden="true">↗</span></a>
         </nav>
+        <button class="theme-toggle" type="button" aria-label="Ativar tema escuro" aria-pressed="false" title="Ativar tema escuro">
+          <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 15.3A8.4 8.4 0 0 1 8.7 3.8 8.5 8.5 0 1 0 20.2 15.3Z"/><path d="M16.5 3.2v3.1M15 4.75h3"/></svg>
+          <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
+        </button>
       </div>
     </header>
 

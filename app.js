@@ -7,6 +7,29 @@
   const topicGrid = document.querySelector("#topic-grid");
   const menuToggle = document.querySelector(".menu-toggle");
   const mainNav = document.querySelector("#main-nav");
+  const themeToggle = document.querySelector(".theme-toggle");
+  const themeColor = document.querySelector('meta[name="theme-color"]');
+
+  function applyTheme(theme, save = false) {
+    const isDark = theme === "dark";
+    document.documentElement.dataset.theme = isDark ? "dark" : "light";
+    themeToggle.setAttribute("aria-pressed", String(isDark));
+    themeToggle.setAttribute("aria-label", isDark ? "Ativar tema claro" : "Ativar tema escuro");
+    themeToggle.title = isDark ? "Ativar tema claro" : "Ativar tema escuro";
+    themeColor.content = isDark ? "#171615" : "#990000";
+
+    if (save) {
+      try {
+        localStorage.setItem("rota-academica-theme", isDark ? "dark" : "light");
+      } catch {}
+    }
+  }
+
+  applyTheme(document.documentElement.dataset.theme || "light");
+  themeToggle.addEventListener("click", () => {
+    const nextTheme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+    applyTheme(nextTheme, true);
+  });
 
   const normalize = (value) => value
     .normalize("NFD")
