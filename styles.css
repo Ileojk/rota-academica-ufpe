@@ -574,3 +574,51 @@ body { font-size: 16px; line-height: 1.65; }
   .tcc-steps li { padding: 15px; }
   .tcc-steps h3 { font-size: 16px; }
 }
+
+.ppc-summary-section { background: #f4f2f0; }
+.ppc-summary-section .section-heading h2 em { color: var(--bordo); font-style: normal; }
+.ppc-summary-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.ppc-summary-card { min-height: 215px; padding: 20px; border: 1px solid var(--line); border-top: 3px solid var(--bordo); border-radius: 10px; background: var(--white); }
+.ppc-summary-card > span { color: var(--bordo); font-size: 10px; font-weight: 700; letter-spacing: .1em; }
+.ppc-summary-card h3 { margin: 12px 0 8px; color: var(--ink); font-size: 19px; line-height: 1.3; }
+.ppc-summary-card p { margin: 0; color: var(--mid); font-size: 13px; line-height: 1.7; }
+.ppc-summary-card a { display: inline-block; margin-top: 12px; color: var(--bordo); font-size: 12px; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+.ppc-full-link { display: flex; align-items: center; justify-content: space-between; gap: 18px; margin-top: 16px; padding: 18px 20px; color: white; background: var(--black); }
+.ppc-full-link > div { display: flex; flex-direction: column; gap: 4px; }
+.ppc-full-link strong { font-size: 15px; }
+.ppc-full-link span { color: #d1d1d1; font-size: 13px; }
+.ppc-full-link a { flex: 0 0 auto; padding: 12px 16px; border-radius: 6px; color: white; background: var(--bordo); font-size: 13px; font-weight: 700; }
+.ppc-full-link a:hover { background: #750000; }
+.elective-profile { margin-top: 16px; border: 1px solid var(--line); border-left: 3px solid var(--bordo); background: var(--white); }
+.elective-profile summary { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 17px 19px; color: var(--ink); list-style: none; cursor: pointer; }
+.elective-profile summary::-webkit-details-marker { display: none; }
+.elective-profile summary > span { display: flex; flex-direction: column; gap: 4px; }
+.elective-profile summary strong { font-size: 16px; }
+.elective-profile summary small { color: var(--mid); font-size: 12px; }
+.elective-profile summary > b { color: var(--bordo); font-size: 22px; font-weight: 400; }
+.elective-profile[open] summary > b { transform: rotate(45deg); }
+.elective-profile > p { margin: 0; padding: 0 19px 14px; color: var(--mid); font-size: 13px; line-height: 1.65; }
+.elective-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 20px; margin: 0; padding: 16px 22px 20px 38px; border-top: 1px solid var(--line); color: var(--mid); background: var(--soft); font-size: 13px; line-height: 1.55; }
+.elective-grid li::marker { color: var(--bordo); }
+.elective-grid code, .semester-card ul code { color: var(--bordo); font: 700 .9em/1.2 var(--font); }
+:root[data-theme="dark"] .ppc-summary-section { background: #1d1b19; }
+:root[data-theme="dark"] .ppc-summary-card,
+:root[data-theme="dark"] .elective-profile { border-color: var(--line); border-top-color: var(--bordo); background: #211f1e; }
+:root[data-theme="dark"] .elective-profile { border-left-color: var(--bordo); }
+:root[data-theme="dark"] .ppc-summary-card h3,
+:root[data-theme="dark"] .elective-profile summary { color: #f4f0ec; }
+:root[data-theme="dark"] .elective-grid { border-color: var(--line); color: #c6c1bd; background: #282523; }
+:root[data-theme="dark"] .ppc-full-link { background: #0d0c0c; }
+@media (max-width: 920px) {
+  .ppc-summary-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 650px) {
+  .ppc-summary-grid, .elective-grid { grid-template-columns: 1fr; }
+  .ppc-summary-card { min-height: auto; padding: 17px; }
+  .ppc-full-link { align-items: flex-start; flex-direction: column; }
+  .ppc-full-link a { align-self: flex-start; }
+  .elective-profile summary { padding: 15px; }
+  .elective-profile summary strong { font-size: 15px; }
+  .elective-profile > p { padding-inline: 15px; font-size: 12px; }
+  .elective-grid { padding-left: 34px; font-size: 12px; }
+}

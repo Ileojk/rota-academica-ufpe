@@ -58,7 +58,7 @@
       ? "Encontrei isso fora da matriz curricular."
       : "Não achei esse termo no mapa.";
     emptyState.querySelector("p").textContent = matches
-      ? "Veja os resultados nos assuntos do curso, na formação complementar ou nas dúvidas."
+      ? "O resultado pode estar no resumo do PPC, nas bolsas, no guia de TCC ou nas dúvidas."
       : "Tente buscar pelo nome de uma disciplina, ACEX, estágio ou TCC.";
     topicGrid.hidden = Boolean(query) && topicMatches === 0;
     status.textContent = query
@@ -68,10 +68,16 @@
       : "";
   }
 
+  function scrollToFirstResult() {
+    const firstMatch = searchableItems.find((item) => !item.hidden);
+    const section = firstMatch?.closest("section") || document.querySelector("#matriz");
+    section.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
   form.addEventListener("submit", (event) => {
     event.preventDefault();
     filterContent(input.value);
-    if (input.value.trim()) document.querySelector("#matriz").scrollIntoView({ behavior: "smooth", block: "start" });
+    if (input.value.trim()) scrollToFirstResult();
   });
 
   input.addEventListener("input", () => filterContent(input.value));
@@ -80,7 +86,7 @@
     button.addEventListener("click", () => {
       input.value = button.dataset.query;
       filterContent(input.value);
-      document.querySelector("#matriz").scrollIntoView({ behavior: "smooth", block: "start" });
+      scrollToFirstResult();
     });
   });
 

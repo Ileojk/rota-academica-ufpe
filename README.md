@@ -1,6 +1,6 @@
 # Rota da Informação — Gestão da Informação UFPE
 
-Guia independente para calouros, feito para destrinchar o Projeto Pedagógico do Curso (PPC) de Gestão da Informação. O portal apresenta em linguagem direta a proposta do curso, a matriz por período, a carga horária e os principais componentes da formação.
+Guia independente para calouros, feito para destrinchar o Projeto Pedagógico do Curso (PPC) de Gestão da Informação. O portal resume objetivos, perfil profissional, competências, metodologia, matriz obrigatória e eletiva, carga horária, ACEX, atividades complementares, estágio, bolsas e TCC em linguagem direta.
 
 ## Abrir
 
@@ -8,7 +8,7 @@ Abra `index.html` em um navegador. Não há etapa de compilação nem dependênc
 
 ## Arquivos
 
-- `index.html`: guia do curso, matriz 103.2, links para disciplinas/ementas, bolsas, estágio e TCC.
+- `index.html`: guia do curso, resumo do PPC, matriz 103.2 com códigos das disciplinas obrigatórias e opções eletivas, além de guias de bolsas, estágio e TCC.
 - `styles.css`: identidade cromática e tipográfica baseada no Manual de Identidade Visual UFPE, layout responsivo e tema escuro.
 - `app.js`: busca local por disciplinas e assuntos, menu móvel e alternância do tema.
 
