@@ -545,3 +545,32 @@ body { font-size: 16px; line-height: 1.65; }
   .formation-card h3 { font-size: 17px; }
   .footer-main > p, .footer-links, .footer-bottom { font-size: 11px; }
 }
+
+/* Direct source links and restored student guides. */
+.resource-links { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; margin-top: 22px; padding: 17px 19px; border: 1px solid var(--line); background: var(--white); }
+.resource-links p { flex: 1 1 100%; margin: 0; color: var(--mid); font-size: 13px; line-height: 1.65; }
+.resource-links p strong { color: var(--ink); }
+.resource-links a { color: var(--bordo); font-size: 12px; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+.opportunities-section { background: #f4f2f0; }
+.opportunities-section .formation-card { min-height: 248px; }
+.tcc-guide-section { background: var(--white); }
+.tcc-steps { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 0; padding: 0; list-style: none; counter-reset: tcc; }
+.tcc-steps li { display: flex; gap: 15px; padding: 18px; border: 1px solid var(--line); border-top: 3px solid var(--bordo); background: var(--white); }
+.tcc-steps li > span { flex: 0 0 34px; color: var(--bordo); font-size: 15px; font-weight: 700; }
+.tcc-steps h3 { margin: 0 0 6px; color: var(--ink); font-size: 17px; line-height: 1.3; }
+.tcc-steps p { margin: 0; color: var(--mid); font-size: 13px; line-height: 1.65; }
+.tcc-resources { margin-top: 16px; }
+:root[data-theme="dark"] .resource-links,
+:root[data-theme="dark"] .tcc-steps li { border-color: var(--line); background: #211f1e; }
+:root[data-theme="dark"] .resource-links p strong,
+:root[data-theme="dark"] .tcc-steps h3 { color: #f4f0ec; }
+:root[data-theme="dark"] .opportunities-section { background: #1d1b19; }
+@media (max-width: 650px) {
+  .resource-links { align-items: flex-start; flex-direction: column; padding: 15px; }
+  .resource-links p, .tcc-steps p { font-size: 12px; }
+  .resource-links a { font-size: 11px; }
+  .opportunities-section .formation-card { min-height: auto; }
+  .tcc-steps { grid-template-columns: 1fr; }
+  .tcc-steps li { padding: 15px; }
+  .tcc-steps h3 { font-size: 16px; }
+}
