@@ -55,11 +55,11 @@
     const noTopicMatches = Boolean(query) && topicMatches === 0;
     emptyState.hidden = !noTopicMatches;
     emptyState.querySelector("strong").textContent = matches
-      ? "Encontrei isso nos atalhos ou nas dúvidas abaixo."
-      : "Essa rota ainda não apareceu.";
+      ? "Encontrei isso fora da matriz curricular."
+      : "Não achei esse termo no mapa.";
     emptyState.querySelector("p").textContent = matches
-      ? "Role a página para ver os resultados encontrados."
-      : "Tente outro termo ou explore os atalhos oficiais.";
+      ? "Veja os resultados nos assuntos do curso, na formação complementar ou nas dúvidas."
+      : "Tente buscar pelo nome de uma disciplina, ACEX, estágio ou TCC.";
     topicGrid.hidden = Boolean(query) && topicMatches === 0;
     status.textContent = query
       ? matches === 0
@@ -71,7 +71,7 @@
   form.addEventListener("submit", (event) => {
     event.preventDefault();
     filterContent(input.value);
-    if (input.value.trim()) document.querySelector("#rotas").scrollIntoView({ behavior: "smooth", block: "start" });
+    if (input.value.trim()) document.querySelector("#matriz").scrollIntoView({ behavior: "smooth", block: "start" });
   });
 
   input.addEventListener("input", () => filterContent(input.value));
@@ -80,7 +80,7 @@
     button.addEventListener("click", () => {
       input.value = button.dataset.query;
       filterContent(input.value);
-      document.querySelector("#rotas").scrollIntoView({ behavior: "smooth", block: "start" });
+      document.querySelector("#matriz").scrollIntoView({ behavior: "smooth", block: "start" });
     });
   });
 

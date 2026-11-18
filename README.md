@@ -1,8 +1,6 @@
-# Rota Acadêmica — Guia UFPE
+# Rota da Informação — Gestão da Informação UFPE
 
-Guia de navegação para serviços da vida acadêmica da UFPE. A estrutura visual segue o padrão cromático e tipográfico do Manual de Identidade Visual: bordô `#990000`, preto `#000000` e Trebuchet MS. O traçado de rotas entre campi é uma ilustração própria do portal, não uma reprodução do brasão.
-
-O brasão não foi incluído. A página institucional de identidade visual da UFPE informa que o uso do brasão por entidades externas requer autorização da Superintendência de Comunicação.
+Guia independente para calouros, feito para destrinchar o Projeto Pedagógico do Curso (PPC) de Gestão da Informação. O portal apresenta em linguagem direta a proposta do curso, a matriz por período, a carga horária e os principais componentes da formação.
 
 ## Abrir
 
@@ -10,17 +8,17 @@ Abra `index.html` em um navegador. Não há etapa de compilação nem dependênc
 
 ## Arquivos
 
-- `index.html`: conteúdo, links oficiais e ilustração vetorial dos campi.
-- `styles.css`: identidade visual adaptada ao manual e layouts para celular.
-- `app.js`: busca local, sugestões de pesquisa e menu móvel.
+- `index.html`: guia do curso, matriz 103.2 e links para fontes institucionais.
+- `styles.css`: identidade cromática e tipográfica baseada no Manual de Identidade Visual UFPE, layout responsivo e tema escuro.
+- `app.js`: busca local por disciplinas e assuntos, menu móvel e alternância do tema.
 
-## Destinos oficiais
+## Fontes e escopo
 
-- Matrícula da graduação: https://www.ufpe.br/prograd/matricula
-- Calendário acadêmico: https://www.ufpe.br/prograd/calendario-academico
+O conteúdo curricular está baseado no PPC Perfil 103.2, publicado pela UFPE e indicado na página do curso para ingressantes a partir de 2020:
+
+- PPC Perfil 103.2: https://www.ufpe.br/documents/39179/0/Perfil_103.2.pdf/a5e74b1b-c00e-4b15-8b66-bae8610efb55
+- Página oficial do curso: https://www.ufpe.br/gestao-da-informacao-bacharelado-cac
 - SIGAA público: https://sigaa.ufpe.br/sigaa/public/home.jsf
-- Auxílios da PROAES: https://www.ufpe.br/proaes/auxilios
-- Catálogo online das bibliotecas: https://biblioteca.ufpe.br/
-- Manual do Estudante: https://www.ufpe.br/manual-do-estudante
+- Regulamento de TCC publicado em 2025: https://www.ufpe.br/documents/431420/6104619/Regulamento%2Bde%2BTCC.pdf/f586c1b9-ca64-4bc7-be77-6742c08db440
 
-Editais, datas e regras podem mudar. Confirme sempre as informações na página oficial de cada serviço.
+O guia resume e reorganiza informações do PPC; não substitui o perfil curricular individual no SIGAA, os regulamentos atuais ou as orientações da coordenação. Se houver diferença, o perfil ligado ao ingresso do estudante e as orientações oficiais prevalecem.

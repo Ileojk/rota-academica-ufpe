@@ -4,14 +4,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#990000" />
-    <meta name="description" content="Um guia direto para serviços e caminhos da vida acadêmica na UFPE." />
-    <title>Rota Acadêmica — Guia UFPE</title>
+    <meta name="description" content="Guia do PPC de Gestão da Informação da UFPE: percurso curricular, extensão, estágio, TCC e vida acadêmica para calouros." />
+    <title>Rota da Informação — Gestão da Informação UFPE</title>
     <script>
       try {
         const savedTheme = localStorage.getItem("rota-academica-theme");
-        if (savedTheme === "light" || savedTheme === "dark") {
-          document.documentElement.dataset.theme = savedTheme;
-        }
+        if (savedTheme === "light" || savedTheme === "dark") document.documentElement.dataset.theme = savedTheme;
       } catch {}
     </script>
     <link rel="stylesheet" href="styles.css" />
@@ -19,18 +17,18 @@
   </head>
   <body>
     <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
-    <div class="utility-bar"><div class="wrap utility-inner"><span>UM GUIA DE SERVIÇOS PARA A VIDA ACADÊMICA</span><a href="https://www.ufpe.br/manual-do-estudante" target="_blank" rel="noreferrer">Manual oficial do estudante <b aria-hidden="true">↗</b></a></div></div>
+    <div class="utility-bar"><div class="wrap utility-inner"><span>GUIA DE CALOUROS · BACHARELADO EM GESTÃO DA INFORMAÇÃO</span><a href="https://www.ufpe.br/gestao-da-informacao-bacharelado-cac" target="_blank" rel="noreferrer">Página oficial do curso <b aria-hidden="true">↗</b></a></div></div>
 
     <header class="site-header">
       <div class="wrap header-inner">
-        <a class="brand" href="#inicio" aria-label="Rota Acadêmica UFPE, início">
-          <svg class="brand-symbol" viewBox="0 0 48 48" aria-hidden="true"><path d="M10 37c9-1 8-12 17-14 5-1 10 1 11-6"/><circle cx="10" cy="37" r="4"/><circle cx="38" cy="17" r="4"/><path class="symbol-spark" d="M23 7v8M19 11h8"/></svg>
-          <span class="brand-text"><strong>Rota Acadêmica</strong><small>Guia de serviços UFPE</small></span>
+        <a class="brand" href="#inicio" aria-label="Rota da Informação, início">
+          <svg class="brand-symbol" viewBox="0 0 48 48" aria-hidden="true"><path d="M8 37c9-1 8-12 17-14 5-1 10 1 11-6"/><circle cx="8" cy="37" r="4"/><circle cx="36" cy="17" r="4"/><path class="symbol-spark" d="M23 7v8M19 11h8"/></svg>
+          <span class="brand-text"><strong>Rota da Informação</strong><small>Gestão da Informação · UFPE</small></span>
         </a>
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav"><span class="sr-only">Abrir menu</span><i></i><i></i><i></i></button>
         <nav class="main-nav" id="main-nav" aria-label="Navegação principal">
-          <a href="#atalhos">Atalhos</a><a href="#rotas">Por assunto</a><a href="#duvidas">Dúvidas</a>
-          <a class="nav-cta" href="https://sigaa.ufpe.br/sigaa/public/home.jsf" target="_blank" rel="noreferrer">Abrir SIGAA <span aria-hidden="true">↗</span></a>
+          <a href="#curso">O curso</a><a href="#matriz">Matriz</a><a href="#formacao">Estágio e TCC</a><a href="#perguntas">Dúvidas</a>
+          <a class="nav-cta" href="https://sigaa.ufpe.br/sigaa/public/home.jsf" target="_blank" rel="noreferrer">SIGAA <span aria-hidden="true">↗</span></a>
         </nav>
         <button class="theme-toggle" type="button" aria-label="Ativar tema escuro" aria-pressed="false" title="Ativar tema escuro">
           <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 15.3A8.4 8.4 0 0 1 8.7 3.8 8.5 8.5 0 1 0 20.2 15.3Z"/><path d="M16.5 3.2v3.1M15 4.75h3"/></svg>
@@ -43,114 +41,166 @@
       <section class="hero" id="inicio">
         <div class="wrap hero-layout">
           <div class="hero-copy">
-            <p class="eyebrow"><span class="eyebrow-rule"></span> RECIFE · AGRESTE · VITÓRIA</p>
-            <h1>A universidade tem muitos caminhos.<br /><em>Vamos achar o seu.</em></h1>
-            <p class="hero-lede">Um mapa simples para chegar aos serviços acadêmicos da UFPE sem se perder entre páginas e siglas.</p>
+            <p class="eyebrow"><span class="eyebrow-rule"></span> UM GUIA PARA QUEM ESTÁ COMEÇANDO</p>
+            <h1>A informação está em todo lugar.<br /><em>Aprenda a fazer ela funcionar.</em></h1>
+            <p class="hero-lede">Conheça o curso de Gestão da Informação da UFPE e entenda, em linguagem direta, o que o Projeto Pedagógico prevê para a sua formação.</p>
             <form class="search-box" role="search" id="search-form">
-              <label class="sr-only" for="site-search">Busque um serviço ou assunto</label>
+              <label class="sr-only" for="site-search">Busque uma disciplina ou assunto do curso</label>
               <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.4"/><path d="m16 16 4.5 4.5"/></svg>
-              <input id="site-search" name="q" type="search" placeholder="Ex.: matrícula, histórico, bolsa..." autocomplete="off" />
-              <button type="submit">Encontrar <span aria-hidden="true">→</span></button>
+              <input id="site-search" name="q" type="search" placeholder="Busque uma disciplina ou assunto do PPC..." autocomplete="off" />
+              <button type="submit">Buscar <span aria-hidden="true">→</span></button>
             </form>
-            <div class="search-hint"><span>BUSCAS COMUNS</span><button class="suggestion" type="button" data-query="matrícula">Matrícula</button><button class="suggestion" type="button" data-query="calendário">Calendário</button><button class="suggestion" type="button" data-query="auxílios">Auxílios</button></div>
+            <div class="search-hint"><span>VÁ DIRETO A</span><button class="suggestion" type="button" data-query="banco de dados">Banco de dados</button><button class="suggestion" type="button" data-query="ACEX">ACEX</button><button class="suggestion" type="button" data-query="estágio">Estágio</button></div>
             <p class="search-status" id="search-status" aria-live="polite"></p>
           </div>
 
-          <div class="route-art" aria-label="Ilustração dos caminhos entre os campi da UFPE">
-            <div class="route-art-head"><span>SEU PERCURSO</span><span>01—03</span></div>
-            <svg class="route-map" viewBox="0 0 500 350" role="img" aria-label="Traçado ilustrado que conecta Recife, Vitória e Agreste">
+          <div class="route-art course-art" aria-label="Ciclo da informação: necessidade, organização, acesso e uso">
+            <div class="route-art-head"><span>O CICLO DA INFORMAÇÃO</span><span>GI / UFPE</span></div>
+            <svg class="route-map" viewBox="0 0 500 350" role="img" aria-label="Diagrama do percurso da informação numa organização">
               <path class="map-contour" d="M64 47c49 16 75 7 112 20s63-1 101 23 63 16 102 5 75 8 83 35-26 45-20 76 21 49 5 81-55 17-91 26-52 4-88 16-65-1-94-15-72-5-101-23-27-37-25-66-13-43-7-70-15-42 6-62 54-30 117-46Z"/>
-              <path class="route-line" d="M111 260c34-27 22-67 68-87s54 18 93-3 32-67 78-75 73 18 89-18"/>
-              <path class="route-dash" d="M111 260c34-27 22-67 68-87s54 18 93-3 32-67 78-75 73 18 89-18"/>
-              <circle class="route-stop stop-recife" cx="111" cy="260" r="10"/><circle class="route-stop stop-vitoria" cx="272" cy="170" r="10"/><circle class="route-stop stop-agreste" cx="439" cy="77" r="10"/>
-              <path class="campus-mark" d="M95 282h34m-28-8h22m-18-8h14m-17 0v16m20-16v16"/><path class="campus-mark" d="M257 192h30m-25-7h20m-16-7h12m-15 0v14m18-14v14"/><path class="campus-mark" d="M423 99h31m-26-7h21m-17-7h13m-16 0v14m19-14v14"/>
-              <text class="map-label" x="71" y="317">RECIFE</text><text class="map-sub" x="71" y="333">CAMPUS SEDE</text>
-              <text class="map-label" x="239" y="225">VITÓRIA</text><text class="map-sub" x="239" y="241">CAV</text>
-              <text class="map-label" x="407" y="132">AGRESTE</text><text class="map-sub" x="407" y="148">CAA · CARUARU</text>
-              <path class="north-mark" d="m458 220 7-21 7 21-7-5-7 5Z"/><text class="north-letter" x="462" y="190">N</text>
+              <path class="route-line" d="M106 96c57-45 113-30 137 31s78 87 143 44 8-95-43-77"/>
+              <path class="route-dash" d="M106 96c57-45 113-30 137 31s78 87 143 44 8-95-43-77"/>
+              <circle class="route-stop stop-recife" cx="106" cy="96" r="10"/><circle class="route-stop stop-vitoria" cx="243" cy="127" r="10"/><circle class="route-stop stop-agreste" cx="386" cy="171" r="10"/><circle class="route-stop stop-recife" cx="343" cy="94" r="8"/>
+              <text class="map-label" x="106" y="75">NECESSIDADE</text><text class="map-sub" x="106" y="116">o que falta saber?</text>
+              <text class="map-label" x="243" y="106">ORGANIZAÇÃO</text><text class="map-sub" x="243" y="148">dar sentido e estrutura</text>
+              <text class="map-label" x="386" y="202">ACESSO</text><text class="map-sub" x="386" y="218">fazer chegar a quem precisa</text>
+              <text class="map-label" x="343" y="69">USO</text><text class="map-sub" x="343" y="111">apoiar escolhas</text>
+              <path class="campus-mark" d="M73 275h350m-330-8 13 8-13 8m95-16 13 8-13 8m95-16 13 8-13 8m95-16 13 8-13 8"/>
+              <text class="map-sub" x="250" y="301">UM PROBLEMA REAL · PESSOAS · CONTEXTO · INFORMAÇÃO</text>
             </svg>
-            <div class="route-art-foot"><span><i></i> CAMINHOS QUE SE ENCONTRAM</span><span>UFPE / PE</span></div>
-            <span class="route-stamp">A VIDA<br />ACONTECE<br /><b>AQUI</b></span>
+            <div class="route-art-foot"><span><i></i> ENTENDER → ORGANIZAR → CONECTAR → TRANSFORMAR</span><span>01—04</span></div>
+            <span class="route-stamp">GESTÃO<br />DA<br /><b>INFORMAÇÃO</b></span>
           </div>
         </div>
-        <div class="hero-bottom"><div class="wrap"><span>UM GUIA DE ROTAS, NÃO MAIS UMA SIGLA.</span><span>LINKS DIRETOS PARA OS SERVIÇOS OFICIAIS <b>↓</b></span></div></div>
+        <div class="hero-bottom"><div class="wrap"><span>DO PPC PARA A VIDA REAL DO CURSO.</span><span>UM MAPA PARA SEU PRÓXIMO PASSO <b>↓</b></span></div></div>
       </section>
 
-      <section class="section quick-section" id="atalhos">
+      <section class="section quick-section" id="curso">
         <div class="wrap">
-          <div class="section-heading quick-heading"><div><p class="eyebrow section-eyebrow">01 / PORTAS DE ENTRADA</p><h2>Chegue direto ao ponto.</h2></div><p>Os caminhos mais usados, sem passar por páginas intermediárias.</p></div>
-          <div class="quick-grid">
-            <a class="quick-card quick-feature" href="https://www.ufpe.br/prograd/matricula" target="_blank" rel="noreferrer" data-searchable="matrícula matricula disciplinas rematrícula rematricula cancelamento edital prograd ingresso">
-              <span class="quick-top"><span>01 — MATRÍCULA</span><span class="quick-icon">↗</span></span><strong>Escolha suas<br />disciplinas.</strong><span class="quick-desc">Editais, tutoriais e orientações de matrícula da graduação.</span><span class="quick-link">Ir para matrícula <b>↗</b></span>
-            </a>
-            <a class="quick-card" href="https://www.ufpe.br/prograd/calendario-academico" target="_blank" rel="noreferrer" data-searchable="calendário calendario acadêmico semestre datas início aula prova">
-              <span class="quick-top"><span>02 — DATAS</span><span class="quick-icon orange">▦</span></span><strong>Veja o calendário<br />acadêmico.</strong><span class="quick-desc">Períodos letivos e datas administrativas da graduação.</span><span class="quick-link">Abrir calendário <b>↗</b></span>
-            </a>
-            <a class="quick-card" href="https://sigaa.ufpe.br/sigaa/public/home.jsf" target="_blank" rel="noreferrer" data-searchable="sigaa sistema notas histórico historico declaração declaracao matrícula matricula portal discente">
-              <span class="quick-top"><span>03 — SISTEMA</span><span class="quick-icon green">◉</span></span><strong>Entre no<br />SIGAA.</strong><span class="quick-desc">Matrícula, notas, histórico e declarações no Portal do Discente.</span><span class="quick-link">Abrir SIGAA <b>↗</b></span>
-            </a>
-            <a class="quick-card" href="https://www.ufpe.br/proaes/auxilios" target="_blank" rel="noreferrer" data-searchable="assistência assistencia estudantil auxílio auxilio bolsa moradia alimentação alimentacao permanência permanencia proaes">
-              <span class="quick-top"><span>04 — PERMANÊNCIA</span><span class="quick-icon lilac">♡</span></span><strong>Conheça os<br />auxílios.</strong><span class="quick-desc">Programas, benefícios e orientações da assistência estudantil.</span><span class="quick-link">Ver auxílios PROAES <b>↗</b></span>
-            </a>
+          <div class="section-heading quick-heading"><div><p class="eyebrow section-eyebrow">01 / PRIMEIRO, ENTENDA O CURSO</p><h2>Não é só sobre guardar informação.</h2></div><p>É sobre perceber um problema, encontrar o que se sabe sobre ele e ajudar pessoas e organizações a agir melhor.</p></div>
+          <p class="course-intro">O PPC descreve o gestor da informação como alguém que conecta quem produz informação, quem precisa dela e as equipes que constroem soluções. O trabalho acontece em contexto: entender as pessoas e a organização importa tanto quanto conhecer as ferramentas.</p>
+          <div class="quick-grid course-pillars">
+            <article class="quick-card quick-feature" data-searchable="gestão da informação gestor necessidades informação organizações diagnóstico análise fluxo informacional">
+              <span class="quick-top"><span>01 — INVESTIGAR</span><span class="quick-icon">?</span></span><strong>Qual é a pergunta<br />ou necessidade?</strong><span class="quick-desc">Entender o contexto, quem usa a informação e qual decisão precisa ser tomada.</span>
+            </article>
+            <article class="quick-card" data-searchable="organização representação indexação curadoria digital documentos dados bancos informação">
+              <span class="quick-top"><span>02 — ORGANIZAR</span><span class="quick-icon orange">▤</span></span><strong>Como encontrar<br />e dar sentido?</strong><span class="quick-desc">Estruturar documentos, dados, conteúdos e sistemas para que possam ser usados.</span>
+            </article>
+            <article class="quick-card" data-searchable="tecnologia sistema usabilidade arquitetura informação banco dados recuperação">
+              <span class="quick-top"><span>03 — CONECTAR</span><span class="quick-icon green">⌘</span></span><strong>Como fazer chegar<br />a quem precisa?</strong><span class="quick-desc">Projetar fluxos, serviços e tecnologias que aproximam pessoas e informação.</span>
+            </article>
+            <article class="quick-card" data-searchable="uso informação decisão organizações administração gestão conhecimento">
+              <span class="quick-top"><span>04 — COLOCAR EM USO</span><span class="quick-icon lilac">↗</span></span><strong>O que muda com<br />a informação?</strong><span class="quick-desc">Apoiar aprendizagem, trabalho e decisões em organizações de diferentes áreas.</span>
+            </article>
+          </div>
+          <div class="course-facts">
+            <div><span>ONDE</span><strong>Recife · CAC</strong><small>Departamento de Ciência da Informação</small></div>
+            <div><span>MODALIDADE</span><strong>Presencial · noite</strong><small>Conforme o PPC, perfil 103.2</small></div>
+            <div><span>TEMPO DO CURSO</span><strong>8 a 14 semestres</strong><small>Mínimo e máximo previstos no perfil</small></div>
+            <a href="https://www.ufpe.br/gestao-da-informacao-bacharelado-cac" target="_blank" rel="noreferrer"><span>PÁGINA DO CURSO</span><strong>Ver informações oficiais</strong><small>Documentos, contatos e apresentação ↗</small></a>
           </div>
         </div>
       </section>
 
-      <section class="section routes-section" id="rotas">
+      <section class="section routes-section" id="matriz">
         <div class="wrap">
-          <div class="routes-intro"><div><p class="eyebrow section-eyebrow">02 / ESCOLHA SUA ROTA</p><h2>O que você veio<br /><em>resolver hoje?</em></h2></div><p>Cada placa abaixo leva à página que trata daquele assunto. Alguns serviços, como histórico e declarações, ficam dentro do SIGAA e pedem login.</p></div>
-          <div class="topic-grid" id="topic-grid">
-            <a class="topic-card" href="https://www.ufpe.br/prograd/matricula" target="_blank" rel="noreferrer" data-searchable="matrícula matricula disciplinas rematrícula rematricula trancamento cancelamento">
-              <span class="topic-index">ROTA 01</span><span class="topic-symbol">↗</span><strong>Matricular ou ajustar disciplinas</strong><span>Editais, tutoriais e orientações da Prograd.</span><b class="topic-go">ABRIR PÁGINA <i>↗</i></b>
-            </a>
-            <a class="topic-card" href="https://www.ufpe.br/prograd/calendario-academico" target="_blank" rel="noreferrer" data-searchable="calendário calendario datas letivo semestre aula avaliação avaliacao">
-              <span class="topic-index">ROTA 02</span><span class="topic-symbol symbol-coral">▦</span><strong>Conferir datas do semestre</strong><span>Calendário acadêmico oficial da graduação.</span><b class="topic-go">ABRIR CALENDÁRIO <i>↗</i></b>
-            </a>
-            <a class="topic-card" href="https://sigaa.ufpe.br/sigaa/public/home.jsf" target="_blank" rel="noreferrer" data-searchable="histórico historico escolar notas declaração declaracao vínculo vinculo comprovante matrícula matricula sigaa">
-              <span class="topic-index">ROTA 03</span><span class="topic-symbol symbol-green">▤</span><strong>Emitir histórico ou declaração</strong><span>Disponível no Portal do Discente do SIGAA.</span><b class="topic-go">ABRIR SIGAA <i>↗</i></b>
-            </a>
-            <a class="topic-card" href="https://www.ufpe.br/proaes/auxilios" target="_blank" rel="noreferrer" data-searchable="assistência assistencia bolsa bolsas auxílio auxilio moradia residente alimentação alimentacao permanência permanencia auxílio-creche proaes">
-              <span class="topic-index">ROTA 04</span><span class="topic-symbol symbol-yellow">♡</span><strong>Buscar bolsas e auxílios</strong><span>Programas e orientações da PROAES.</span><b class="topic-go">VER AUXÍLIOS <i>↗</i></b>
-            </a>
-            <a class="topic-card" href="https://biblioteca.ufpe.br/" target="_blank" rel="noreferrer" data-searchable="biblioteca livro acervo empréstimo emprestimo reserva pergamum sib">
-              <span class="topic-index">ROTA 05</span><span class="topic-symbol symbol-blue">▧</span><strong>Pesquisar livros e acervo</strong><span>Catálogo online do Sistema Integrado de Bibliotecas.</span><b class="topic-go">PESQUISAR NO ACERVO <i>↗</i></b>
-            </a>
-            <a class="topic-card" href="https://www.ufpe.br/manual-do-estudante" target="_blank" rel="noreferrer" data-searchable="manual estudante campus restaurante ônibus onibus mobilidade biblioteca sigla serviços servicos vida acadêmica academica">
-              <span class="topic-index">ROTA 06</span><span class="topic-symbol symbol-lilac">⌂</span><strong>Descobrir serviços do campus</strong><span>Manual oficial: RU, bibliotecas, mobilidade e mais.</span><b class="topic-go">ABRIR MANUAL <i>↗</i></b>
-            </a>
+          <div class="routes-intro"><div><p class="eyebrow section-eyebrow">02 / SEU MAPA CURRICULAR</p><h2>O curso, período<br /><em>por período.</em></h2></div><p>Toque em cada etapa para ver as disciplinas obrigatórias previstas no perfil 103.2. O PPC organiza a formação em oito semestres e mistura fundamentos, tecnologia, gestão e organização da informação.</p></div>
+          <div class="curriculum-summary">
+            <div class="curriculum-total"><span>FORMAÇÃO COMPLETA</span><strong>2.700<small> horas</small></strong><a href="https://www.ufpe.br/documents/39179/0/Perfil_103.2.pdf/a5e74b1b-c00e-4b15-8b66-bae8610efb55" target="_blank" rel="noreferrer">Abrir PPC oficial · Perfil 103.2 ↗</a></div>
+            <div class="hours-breakdown" aria-label="Distribuição da carga horária do perfil 103.2">
+              <div class="hours-bar"><i class="hours-required"></i><i class="hours-elective"></i><i class="hours-complementary"></i><i class="hours-extension"></i></div>
+              <div class="hours-legend"><span><i class="legend-required"></i>1.620h obrigatórias</span><span><i class="legend-elective"></i>600h eletivas</span><span><i class="legend-complementary"></i>210h complementares</span><span><i class="legend-extension"></i>270h ACEX</span></div>
+              <p>A proporção ajuda a visualizar a composição, não o semestre em que cada atividade precisa acontecer.</p>
+            </div>
           </div>
-          <div class="empty-state" id="empty-state" hidden><span class="empty-route">?</span><strong>Essa rota ainda não apareceu.</strong><p>Tente outro termo ou explore os atalhos oficiais.</p><button type="button" id="clear-search">Limpar busca</button></div>
+
+          <div class="topic-grid semester-grid" id="topic-grid" aria-label="Disciplinas obrigatórias por período">
+            <details class="topic-card semester-card" data-searchable="1 período primeiro Fundamentos da gestão da informação método pesquisa ciência informação organização informação usabilidade arquitetura informação">
+              <summary><span class="topic-index">PERÍODO 01 · FUNDAMENTOS</span><span class="topic-symbol">01</span><strong>Aprender a olhar para a informação.</strong><span>O vocabulário e as bases para começar.</span><b class="topic-go">VER DISCIPLINAS <i>＋</i></b></summary>
+              <ul><li>Fundamentos da Gestão da Informação</li><li>Fundamentos do Método de Pesquisa</li><li>Introdução à Organização da Informação</li><li>Fundamentos da Ciência da Informação</li><li>Usabilidade e Arquitetura da Informação</li></ul>
+            </details>
+            <details class="topic-card semester-card" data-searchable="2 período segundo banco dados conhecimento indexação fontes informação práticas informacionais">
+              <summary><span class="topic-index">PERÍODO 02 · BASES E SISTEMAS</span><span class="topic-symbol">02</span><strong>Dar forma e estrutura.</strong><span>Fontes, organização, práticas e dados.</span><b class="topic-go">VER DISCIPLINAS <i>＋</i></b></summary>
+              <ul><li>Banco de Dados</li><li>Fundamentos da Gestão do Conhecimento</li><li>Indexação</li><li>Fontes de Informação I</li><li>Práticas Informacionais</li></ul>
+            </details>
+            <details class="topic-card semester-card" data-searchable="3 período terceiro recuperação informação qualidade métodos quantitativos instrumentos organização política informação">
+              <summary><span class="topic-index">PERÍODO 03 · MÉTODOS</span><span class="topic-symbol">03</span><strong>Encontrar, medir, avaliar.</strong><span>Métodos para organizar e recuperar informação.</span><b class="topic-go">VER DISCIPLINAS <i>＋</i></b></summary>
+              <ul><li>Recuperação da Informação</li><li>Métodos de Qualidade da Informação</li><li>Métodos Quantitativos</li><li>Instrumentos de Organização da Informação</li><li>Política de Informação</li></ul>
+            </details>
+            <details class="topic-card semester-card" data-searchable="4 período quarto modelagem sistemas gestão organizações documental processamento ética direito informação">
+              <summary><span class="topic-index">PERÍODO 04 · ORGANIZAÇÕES</span><span class="topic-symbol">04</span><strong>Ligar informação e trabalho.</strong><span>Sistemas, processos, documentos e responsabilidade.</span><b class="topic-go">VER DISCIPLINAS <i>＋</i></b></summary>
+              <ul><li>Modelagem de Sistemas de Informação</li><li>Gestão da Informação nas Organizações</li><li>Gestão Documental</li><li>Processamento da Informação</li><li>Ética e Direito da Informação</li></ul>
+            </details>
+            <details class="topic-card semester-card" data-searchable="5 período quinto curadoria digital preservação ciclo de vida informação">
+              <summary><span class="topic-index">PERÍODO 05 · CURADORIA</span><span class="topic-symbol">05</span><strong>Cuidar da informação digital.</strong><span>Manter informação acessível e útil ao longo do tempo.</span><b class="topic-go">VER DISCIPLINAS <i>＋</i></b></summary>
+              <ul><li>Curadoria Digital</li></ul>
+            </details>
+            <details class="topic-card semester-card" data-searchable="6 período sexto estágio supervisionado obrigatório 120 horas experiência profissional">
+              <summary><span class="topic-index">PERÍODO 06 · PRÁTICA</span><span class="topic-symbol">06</span><strong>Levar a formação ao campo.</strong><span>O perfil curricular prevê o estágio supervisionado obrigatório.</span><b class="topic-go">VER DISCIPLINA <i>＋</i></b></summary>
+              <ul><li>Estágio Supervisionado · 120h</li></ul>
+            </details>
+            <details class="topic-card semester-card" data-searchable="7 período sétimo métodos pesquisa investigação acadêmica">
+              <summary><span class="topic-index">PERÍODO 07 · INVESTIGAÇÃO</span><span class="topic-symbol">07</span><strong>Preparar a pesquisa final.</strong><span>Métodos de pesquisa aprofundam o percurso investigativo.</span><b class="topic-go">VER DISCIPLINA <i>＋</i></b></summary>
+              <ul><li>Métodos de Pesquisa</li></ul>
+            </details>
+            <details class="topic-card semester-card" data-searchable="8 período oitavo trabalho conclusão curso TCC monografia pesquisa">
+              <summary><span class="topic-index">PERÍODO 08 · CONCLUSÃO</span><span class="topic-symbol">08</span><strong>Construir e apresentar seu TCC.</strong><span>Uma investigação orientada que fecha o percurso.</span><b class="topic-go">VER DISCIPLINA <i>＋</i></b></summary>
+              <ul><li>Trabalho de Conclusão de Curso · 180h</li></ul>
+            </details>
+          </div>
+          <div class="empty-state" id="empty-state" hidden><span class="empty-route">?</span><strong>Não achei esse termo no mapa.</strong><p>Tente buscar pelo nome da disciplina ou por assuntos como dados, estágio, ACEX ou TCC.</p><button type="button" id="clear-search">Limpar busca</button></div>
+          <p class="curriculum-caveat"><strong>Seu perfil individual é o que vale.</strong> Esta leitura organiza a matriz 103.2 publicada no PPC para ajudar no entendimento. Consulte no SIGAA o perfil curricular vinculado ao seu ingresso; ele e as orientações atuais da coordenação prevalecem se houver diferença.</p>
         </div>
       </section>
 
-      <section class="campus-band" aria-label="Campi da UFPE"><div class="wrap campus-band-inner"><span class="campus-band-label">UMA UNIVERSIDADE,<br />MUITOS CAMINHOS.</span><span class="campus-tag"><i>01</i> Recife <small>Campus Joaquim Amazonas</small></span><span class="campus-tag"><i>02</i> Agreste <small>Caruaru · CAA</small></span><span class="campus-tag"><i>03</i> Vitória <small>CAV</small></span><span class="campus-band-mark" aria-hidden="true">✳</span></div></section>
+      <section class="section quick-section formation-section" id="formacao">
+        <div class="wrap">
+          <div class="section-heading quick-heading"><div><p class="eyebrow section-eyebrow">03 / O QUE MAIS COMPÕE SUA FORMAÇÃO</p><h2>Nem tudo cabe numa sala de aula.</h2></div><p>O PPC também conta experiências, projetos e produção acadêmica dentro da carga horária.</p></div>
+          <div class="formation-grid">
+            <article class="formation-card" data-searchable="ACEX extensão ação curricular extensão 270 horas comunidade projeto curricularização">
+              <span class="formation-number">A</span><p class="eyebrow section-eyebrow">270 HORAS · ACEX</p><h3>Extensão que sai da universidade.</h3><p>ACEX são atividades curriculares de extensão: experiências que conectam o que você estuda a questões e pessoas fora da sala de aula. No perfil 103.2, o colegiado define as ações e elas são ofertadas no período noturno.</p><a href="https://sigaa.ufpe.br/sigaa/public/departamento/extensao.jsf?id=720" target="_blank" rel="noreferrer">Ver ações de extensão do DCI no SIGAA ↗</a>
+            </article>
+            <article class="formation-card" data-searchable="atividades complementares pesquisa extensão monitoria estágio não obrigatório eventos 210 horas">
+              <span class="formation-number">B</span><p class="eyebrow section-eyebrow">210 HORAS · COMPLEMENTARES</p><h3>Aprender também acontece fora da matriz.</h3><p>O PPC cita pesquisa, extensão, monitoria e estágio não obrigatório, além de outras atividades que o colegiado aprove em procedimento próprio. Guarde comprovantes e confira as regras de aproveitamento antes de contar horas.</p><a href="https://www.ufpe.br/gestao-da-informacao-bacharelado-cac" target="_blank" rel="noreferrer">Consultar documentos e regras do curso ↗</a>
+            </article>
+            <article class="formation-card" data-searchable="estágio estágio supervisionado obrigatório 120 horas organizações trabalho informação">
+              <span class="formation-number">C</span><p class="eyebrow section-eyebrow">120 HORAS · ESTÁGIO OBRIGATÓRIO</p><h3>Experimentar o trabalho com informação.</h3><p>É uma atividade prática supervisionada em campo profissional. O perfil 103.2 a prevê no 6º período; processos, termos e orientações devem ser confirmados com a coordenação de estágio e com o regulamento atual.</p><a href="https://www.ufpe.br/gestao-da-informacao-bacharelado-cac" target="_blank" rel="noreferrer">Abrir página do curso e regulamento de estágio ↗</a>
+            </article>
+            <article class="formation-card" data-searchable="TCC trabalho conclusão curso 180 horas pesquisa orientação defesa perfil 103.2">
+              <span class="formation-number">D</span><p class="eyebrow section-eyebrow">180 HORAS · TCC</p><h3>Investigar uma questão da área.</h3><p>O Trabalho de Conclusão é uma produção acadêmica orientada. No perfil 103.2, aparece no 8º período e tem Métodos de Pesquisa como pré-requisito. O regulamento próprio publicado em 2025 traz os procedimentos atuais.</p><a href="https://www.ufpe.br/documents/431420/6104619/Regulamento%2Bde%2BTCC.pdf/f586c1b9-ca64-4bc7-be77-6742c08db440" target="_blank" rel="noreferrer">Ler regulamento de TCC do curso ↗</a>
+            </article>
+          </div>
+        </div>
+      </section>
 
-      <section class="section faq-section" id="duvidas">
-        <div class="wrap faq-layout"><div class="faq-heading"><p class="eyebrow section-eyebrow">03 / ÚLTIMA PARADA</p><h2>Antes de seguir, uma dúvida?</h2><p>Respostas curtas com o link certo para você continuar.</p><a href="https://www.ufpe.br/manual-do-estudante" target="_blank" rel="noreferrer" class="text-link">Ver Manual do Estudante <span aria-hidden="true">↗</span></a></div>
+      <section class="campus-band" aria-label="Links importantes do curso"><div class="wrap campus-band-inner"><span class="campus-band-label">SEUS PRÓXIMOS<br />PASSOS.</span><a class="campus-tag" href="https://sigaa.ufpe.br/sigaa/public/home.jsf"><i>01</i> SIGAA <small>Seu perfil e sua vida acadêmica ↗</small></a><a class="campus-tag" href="https://www.ufpe.br/gestao-da-informacao-bacharelado-cac"><i>02</i> Curso <small>Equipe, documentos e contato ↗</small></a><a class="campus-tag" href="https://www.ufpe.br/manual-do-estudante"><i>03</i> Manual <small>Serviços e vida na UFPE ↗</small></a><span class="campus-band-mark" aria-hidden="true">↗</span></div></section>
+
+      <section class="section faq-section" id="perguntas">
+        <div class="wrap faq-layout"><div class="faq-heading"><p class="eyebrow section-eyebrow">04 / DÚVIDAS DE QUEM ESTÁ CHEGANDO</p><h2>O PPC explica o curso. E agora?</h2><p>Use este guia como começo. Para sua situação específica, confira o SIGAA e fale com a coordenação.</p><a href="https://www.ufpe.br/gestao-da-informacao-bacharelado-cac" target="_blank" rel="noreferrer" class="text-link">Página e contato do curso <span aria-hidden="true">↗</span></a></div>
           <div class="faq-list">
-            <details data-searchable="como acessar entrar sigaa login primeiro acesso">
-              <summary>Como faço meu primeiro acesso ao SIGAA?<span aria-hidden="true">+</span></summary>
-              <p>Abra a <a href="https://sigaa.ufpe.br/sigaa/public/home.jsf" target="_blank" rel="noreferrer">página pública do SIGAA</a> e use a opção de login/cadastro para discente. O <a href="https://www.ufpe.br/manual-do-estudante" target="_blank" rel="noreferrer">Manual do Estudante</a> também reúne orientações sobre os serviços digitais.</p>
+            <details data-searchable="perfil curricular SIGAA perfil 103.2 ingresso matriz">
+              <summary>Como sei qual perfil curricular é o meu?<span aria-hidden="true">+</span></summary>
+              <p>Consulte seu vínculo e perfil curricular no SIGAA. O PPC apresentado aqui é o <strong>perfil 103.2</strong>, indicado na página do curso para ingressantes a partir de 2020. Se sua matriz ou orientação da coordenação diferir, siga o perfil associado ao seu ingresso.</p>
             </details>
-            <details data-searchable="onde calendário datas semestre">
-              <summary>Onde vejo as datas oficiais do semestre?<span aria-hidden="true">+</span></summary>
-              <p>O <a href="https://www.ufpe.br/prograd/calendario-academico" target="_blank" rel="noreferrer">Calendário Acadêmico da Prograd</a> reúne as datas da graduação. Confira a página antes de se organizar, pois o calendário pode ser republicado.</p>
+            <details data-searchable="eletivas livres escolha disciplina 600 horas outros cursos">
+              <summary>O que são as 600 horas eletivas?<span aria-hidden="true">+</span></summary>
+              <p>No perfil 103.2, são componentes eletivos livres que podem vir do próprio perfil ou de outros cursos de graduação e pós-graduação, inclusive de outras IES reconhecidas pelo MEC, conforme as regras de aproveitamento. Combine a escolha com a coordenação.</p>
             </details>
-            <details data-searchable="onde buscar bolsas auxílio auxilio assistência assistencia estudantil">
-              <summary>Onde encontro bolsas e auxílios estudantis?<span aria-hidden="true">+</span></summary>
-              <p>A página de <a href="https://www.ufpe.br/proaes/auxilios" target="_blank" rel="noreferrer">Auxílios da PROAES</a> concentra programas e orientações. Editais e critérios podem mudar; consulte o conteúdo vigente publicado pela Pró-Reitoria.</p>
+            <details data-searchable="estágio quando fazer obrigatório 6 período regulamento">
+              <summary>Quando faço o estágio obrigatório?<span aria-hidden="true">+</span></summary>
+              <p>A matriz 103.2 o posiciona no 6º período, com 120 horas. A oferta e os requisitos práticos podem depender de regras e procedimentos atualizados; confira o regulamento na página do curso antes de iniciar.</p>
             </details>
-            <details data-searchable="como emitir histórico escolar declaração comprovante">
-              <summary>Como emito meu histórico ou comprovante de matrícula?<span aria-hidden="true">+</span></summary>
-              <p>Estudantes com vínculo ativo podem emitir documentos pelo <a href="https://sigaa.ufpe.br/sigaa/public/home.jsf" target="_blank" rel="noreferrer">Portal do Discente no SIGAA</a>, na área Ensino. Para outras situações, o <a href="https://www.ufpe.br/manual-do-estudante" target="_blank" rel="noreferrer">Manual do Estudante</a> informa os canais da Coordenação de Controle Acadêmico.</p>
+            <details data-searchable="contato coordenação secretaria curso horário noturno CAC DCI">
+              <summary>Com quem falo se ainda tiver dúvida?<span aria-hidden="true">+</span></summary>
+              <p>A página oficial do curso informa os contatos da secretaria e da coordenação. O curso funciona no Centro de Artes e Comunicação, vinculado ao Departamento de Ciência da Informação.</p>
             </details>
           </div>
         </div>
       </section>
 
-      <section class="official-note"><div class="wrap official-note-inner"><span class="official-symbol">i</span><p><strong>Este guia aponta o caminho.</strong> Prazos, editais e regras são definidos pela UFPE. Confirme sempre os detalhes na página oficial de cada serviço.</p><a href="https://www.ufpe.br/manual-do-estudante" target="_blank" rel="noreferrer">Manual oficial <b>↗</b></a></div></section>
+      <section class="official-note"><div class="wrap official-note-inner"><span class="official-symbol">i</span><p><strong>Este guia traduz e organiza; não altera o PPC.</strong> A matriz individual no SIGAA, os regulamentos vigentes e as orientações da coordenação são as referências para decisões acadêmicas.</p><a href="https://www.ufpe.br/gestao-da-informacao-bacharelado-cac" target="_blank" rel="noreferrer">Fontes oficiais <b>↗</b></a></div></section>
     </main>
 
-    <footer class="site-footer"><div class="wrap footer-main"><a class="brand footer-brand" href="#inicio"><svg class="brand-symbol" viewBox="0 0 48 48" aria-hidden="true"><path d="M10 37c9-1 8-12 17-14 5-1 10 1 11-6"/><circle cx="10" cy="37" r="4"/><circle cx="38" cy="17" r="4"/><path class="symbol-spark" d="M23 7v8M19 11h8"/></svg><span class="brand-text"><strong>Rota Acadêmica</strong><small>Guia de serviços UFPE</small></span></a><p>Mais clareza entre você e os serviços da universidade.</p><div class="footer-links"><a href="https://www.ufpe.br/prograd/matricula" target="_blank" rel="noreferrer">Matrícula ↗</a><a href="https://www.ufpe.br/prograd/calendario-academico" target="_blank" rel="noreferrer">Calendário ↗</a><a href="https://www.ufpe.br/proaes/auxilios" target="_blank" rel="noreferrer">Auxílios ↗</a></div></div><div class="wrap footer-bottom"><span>Guia independente de navegação · UFPE</span><span>Feito para encontrar o próximo passo.</span></div></footer>
+    <footer class="site-footer"><div class="wrap footer-main"><a class="brand footer-brand" href="#inicio"><svg class="brand-symbol" viewBox="0 0 48 48" aria-hidden="true"><path d="M8 37c9-1 8-12 17-14 5-1 10 1 11-6"/><circle cx="8" cy="37" r="4"/><circle cx="36" cy="17" r="4"/><path class="symbol-spark" d="M23 7v8M19 11h8"/></svg><span class="brand-text"><strong>Rota da Informação</strong><small>Gestão da Informação · UFPE</small></span></a><p>Um mapa de leitura do PPC para quem está começando no curso.</p><div class="footer-links"><a href="https://www.ufpe.br/documents/39179/0/Perfil_103.2.pdf/a5e74b1b-c00e-4b15-8b66-bae8610efb55" target="_blank" rel="noreferrer">PPC 103.2 ↗</a><a href="https://www.ufpe.br/gestao-da-informacao-bacharelado-cac" target="_blank" rel="noreferrer">Curso ↗</a><a href="https://sigaa.ufpe.br/sigaa/public/home.jsf" target="_blank" rel="noreferrer">SIGAA ↗</a></div></div><div class="wrap footer-bottom"><span>Guia independente de apoio à leitura do PPC · UFPE</span><span>Perfil curricular individual: consulte seu SIGAA.</span></div></footer>
   </body>
 </html>

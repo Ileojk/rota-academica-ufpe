@@ -253,6 +253,108 @@ button, input { font: inherit; }
   *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; }
 }
 
+/* Course-guide layout: clear PPC data hierarchy and curriculum interactions. */
+.course-intro { max-width: 820px; margin: -8px 0 24px; color: var(--mid); font-size: 12px; line-height: 1.8; }
+.course-pillars .quick-card { min-height: 220px; }
+.course-pillars .quick-card strong { font-size: 17px; }
+.course-facts { display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 18px; border: 1px solid var(--line); background: var(--white); }
+.course-facts > div, .course-facts > a { display: flex; min-height: 93px; flex-direction: column; justify-content: center; padding: 14px 17px; border-right: 1px solid var(--line); }
+.course-facts > a { border-right: 0; }
+.course-facts span { margin-bottom: 5px; color: var(--bordo); font-size: 8px; font-weight: 700; letter-spacing: .12em; }
+.course-facts strong { color: var(--black); font-size: 13px; line-height: 1.3; }
+.course-facts small { margin-top: 3px; color: var(--mid); font-size: 9px; line-height: 1.45; }
+.course-facts > a:hover { background: var(--soft); }
+.course-facts > a strong { color: var(--bordo); }
+.curriculum-summary { display: grid; grid-template-columns: .7fr 1.3fr; align-items: stretch; margin-bottom: 18px; border: 1px solid var(--line); background: var(--white); }
+.curriculum-total { display: flex; flex-direction: column; justify-content: center; padding: 19px 22px; color: var(--white); background: var(--bordo); }
+.curriculum-total > span { font-size: 8px; font-weight: 700; letter-spacing: .14em; color: #f2dada; }
+.curriculum-total strong { margin: 2px 0 1px; font-size: 35px; line-height: 1.12; }
+.curriculum-total strong small { font-size: 15px; font-weight: 500; }
+.curriculum-total a { margin-top: 9px; color: white; font-size: 9px; text-decoration: underline; text-underline-offset: 3px; }
+.hours-breakdown { display: flex; flex-direction: column; justify-content: center; padding: 20px 22px 14px; }
+.hours-bar { display: flex; height: 13px; overflow: hidden; background: #eee; }
+.hours-bar i { display: block; height: 100%; }
+.hours-required { width: 60%; background: var(--bordo); }
+.hours-elective { width: 22.222%; background: #333; }
+.hours-complementary { width: 7.778%; background: #999; }
+.hours-extension { width: 10%; background: #c67d7d; }
+.hours-legend { display: flex; flex-wrap: wrap; gap: 8px 16px; margin-top: 12px; color: var(--mid); font-size: 8px; }
+.hours-legend span { display: inline-flex; align-items: center; gap: 5px; }
+.hours-legend i { width: 8px; height: 8px; border-radius: 50%; }
+.legend-required { background: var(--bordo); }.legend-elective { background: #333; }.legend-complementary { background: #999; }.legend-extension { background: #c67d7d; }
+.hours-breakdown > p { margin: 8px 0 0; color: var(--muted); font-size: 8px; }
+.semester-grid { align-items: start; }
+.semester-card { min-height: unset; padding: 0; border-left-width: 3px; }
+.semester-card summary { position: relative; min-height: 181px; padding: 16px 18px; list-style: none; cursor: pointer; }
+.semester-card summary::-webkit-details-marker { display: none; }
+.semester-card summary::marker { content: ""; }
+.semester-card summary .topic-index { display: block; }
+.semester-card summary .topic-symbol { top: 12px; right: 15px; }
+.semester-card summary strong { display: block; max-width: 255px; margin-top: 17px; color: var(--black); font-size: 17px; line-height: 1.2; }
+.semester-card summary > span:not(.topic-index):not(.topic-symbol) { display: block; margin-top: 8px; color: var(--mid); font-size: 10px; }
+.semester-card summary .topic-go { position: absolute; right: 18px; bottom: 14px; left: 18px; }
+.semester-card[open] summary .topic-go i { font-size: 0; }
+.semester-card[open] summary .topic-go i::after { content: "−"; font-size: 16px; }
+.semester-card ul { display: grid; gap: 8px; margin: 0; padding: 14px 18px 19px 31px; border-top: 1px solid var(--line); color: var(--mid); background: var(--soft); font-size: 9px; line-height: 1.45; }
+.semester-card li::marker { color: var(--bordo); }
+.curriculum-caveat { margin: 18px 0 0; padding: 12px 14px; border-left: 3px solid var(--bordo); color: var(--mid); background: var(--white); font-size: 9px; line-height: 1.7; }
+.curriculum-caveat strong { color: var(--black); }
+.formation-section { background: var(--white); }
+.formation-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+.formation-card { position: relative; min-height: 226px; padding: 20px 22px 18px; border: 1px solid var(--line); border-top: 3px solid var(--bordo); background: var(--white); }
+.formation-number { position: absolute; top: 13px; right: 16px; color: #dedede; font-size: 29px; font-weight: 700; }
+.formation-card .eyebrow { margin-bottom: 7px; font-size: 8px; }
+.formation-card h3 { max-width: 380px; margin: 0; color: var(--black); font-size: 16px; line-height: 1.35; }
+.formation-card > p:not(.eyebrow) { max-width: 480px; margin: 8px 0 13px; color: var(--mid); font-size: 10px; line-height: 1.7; }
+.formation-card a { color: var(--bordo); font-size: 9px; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+.campus-band-inner a.campus-tag:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+html[data-theme="dark"] .course-intro,
+html[data-theme="dark"] .course-facts small,
+html[data-theme="dark"] .hours-legend,
+html[data-theme="dark"] .hours-breakdown > p,
+html[data-theme="dark"] .semester-card ul,
+html[data-theme="dark"] .curriculum-caveat,
+html[data-theme="dark"] .formation-card > p:not(.eyebrow) { color: #c6c1bd; }
+html[data-theme="dark"] .course-facts,
+html[data-theme="dark"] .curriculum-summary,
+html[data-theme="dark"] .formation-card { background: #211f1e; }
+html[data-theme="dark"] .course-facts strong,
+html[data-theme="dark"] .course-facts > a strong,
+html[data-theme="dark"] .semester-card summary strong,
+html[data-theme="dark"] .formation-card h3,
+html[data-theme="dark"] .curriculum-caveat strong { color: #f7f4ef; }
+html[data-theme="dark"] .course-facts > a:hover,
+html[data-theme="dark"] .semester-card ul,
+html[data-theme="dark"] .curriculum-caveat { background: #282523; }
+
+@media (max-width: 920px) {
+  .course-facts { grid-template-columns: repeat(2, 1fr); }
+  .course-facts > div:nth-child(2) { border-right: 0; }
+  .course-facts > div:nth-child(1), .course-facts > div:nth-child(2) { border-bottom: 1px solid var(--line); }
+  .course-facts > a { grid-column: span 2; min-height: 76px; }
+}
+@media (max-width: 650px) {
+  .course-intro { font-size: 10px; }
+  .course-pillars .quick-card { min-height: 203px; }
+  .course-facts > div, .course-facts > a { padding: 11px; }
+  .course-facts strong { font-size: 11px; }
+  .curriculum-summary { grid-template-columns: 1fr; }
+  .curriculum-total { padding: 16px 18px; }
+  .curriculum-total strong { font-size: 30px; }
+  .hours-breakdown { padding: 16px 15px 12px; }
+  .hours-legend { gap: 7px 11px; font-size: 7px; }
+  .semester-card summary { min-height: 183px; padding: 12px; }
+  .semester-card summary strong { font-size: 14px; }
+  .semester-card summary > span:not(.topic-index):not(.topic-symbol) { font-size: 9px; }
+  .semester-card summary .topic-go { right: 12px; left: 12px; font-size: 7px; }
+  .semester-card ul { padding: 12px 13px 16px 26px; font-size: 9px; }
+  .formation-grid { grid-template-columns: 1fr; }
+  .formation-card { min-height: auto; padding: 16px; }
+  .formation-card h3 { font-size: 15px; }
+  .formation-card > p:not(.eyebrow) { font-size: 9px; }
+}
+
 /* Refined type, controls and theme switch */
 body { font-size: 16px; line-height: 1.65; }
 .site-header { box-shadow: 0 4px 18px rgba(0,0,0,.045); }
@@ -387,4 +489,59 @@ body { font-size: 16px; line-height: 1.65; }
 }
 @media (prefers-reduced-motion: reduce) {
   .theme-toggle, .quick-card, .topic-card { transition: none !important; }
+}
+
+/* Keep supporting copy readable without competing with headings. */
+.utility-bar { font-size: 10px; }
+.utility-inner a, .main-nav { font-size: 13px; }
+.brand-text small { font-size: 10px; }
+.eyebrow, .quick-top, .topic-index, .campus-band-label,
+.course-facts span, .curriculum-total > span, .formation-card .eyebrow { font-size: 10px; }
+.hero-lede { font-size: 16px; }
+.search-box input, .search-box button, .suggestion { font-size: 13px; }
+.search-hint, .search-status { font-size: 12px; }
+.quick-desc, .topic-card > span:not(.topic-index):not(.topic-symbol),
+.routes-intro > p, .quick-heading > p, .faq-heading > p:not(.eyebrow),
+.faq-list details p, .course-intro, .course-facts small,
+.hours-breakdown > p, .semester-card ul, .formation-card > p:not(.eyebrow),
+.official-note p { font-size: 13px; }
+.quick-link, .topic-go, .text-link, .official-note a, .formation-card a,
+.curriculum-total a, .footer-links { font-size: 12px; }
+.course-facts strong { font-size: 15px; }
+.hours-legend { font-size: 11px; }
+.semester-card summary > span:not(.topic-index):not(.topic-symbol) { font-size: 12px; }
+.semester-card summary strong { font-size: 18px; }
+.curriculum-caveat { font-size: 12px; }
+.formation-card h3 { font-size: 18px; }
+.footer-main > p, .footer-bottom { font-size: 11px; }
+.route-art-head, .route-art-foot { font-size: 9px; }
+.route-art-foot { font-size: 9px; }
+.map-label { font-size: 11px; }
+.map-sub { font-size: 9px; }
+.route-stamp { font-size: 8px; }
+
+@media (max-width: 650px) {
+  .utility-inner { font-size: 9px; }
+  .utility-inner a { font-size: 10px; }
+  .main-nav { font-size: 15px; }
+  .hero-lede { font-size: 15px; }
+  .search-box input, .search-box button { font-size: 12px; }
+  .search-hint, .search-status, .suggestion { font-size: 11px; }
+  .hero-bottom .wrap { font-size: 8px; }
+  .quick-desc, .topic-card > span:not(.topic-index):not(.topic-symbol),
+  .routes-intro > p, .quick-heading > p, .faq-heading > p:not(.eyebrow),
+  .faq-list details p, .course-intro, .course-facts small,
+  .hours-breakdown > p, .semester-card ul, .formation-card > p:not(.eyebrow),
+  .official-note p { font-size: 12px; }
+  .quick-link, .topic-go, .text-link, .official-note a,
+  .formation-card a, .curriculum-total a { font-size: 11px; }
+  .topic-card { min-height: 205px; }
+  .topic-card strong { font-size: 16px; }
+  .course-facts strong { font-size: 14px; }
+  .hours-legend { font-size: 10px; }
+  .semester-card summary strong { font-size: 16px; }
+  .semester-card summary > span:not(.topic-index):not(.topic-symbol) { font-size: 11px; }
+  .semester-card summary .topic-go { font-size: 9px; }
+  .formation-card h3 { font-size: 17px; }
+  .footer-main > p, .footer-links, .footer-bottom { font-size: 11px; }
 }
